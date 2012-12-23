@@ -1,0 +1,6 @@
+{
+  "" : [ { "name" : "Select an event" } ],
+  "Private" : [ { "name" : "Private" } ],
+  "Ram-Katha" : [ { "name" : "Ramayan Katha" } , {"dates" : ["10/13/2013" , "10/14/2013" ]} , { "desc" : "Time: 6:30 PM till 8:30 PM"}],
+  "Sai-Bhajan": [ { "name" : "Sai Baba Bhajan" } , {"dates" : ["12/09/2013" , "11/08/2013" , "12/12/2013"]} , { "desc" : "Sai Bhajans, Pravachan and Dinner.</br>Time: 7:30 PM till 8:30 PM"}]
+}
