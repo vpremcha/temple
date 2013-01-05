@@ -126,11 +126,6 @@ function loadScript(){
 
         setWatermark('#privateEventTime','hh:mm');
         setWatermark('#privateEventName','Enter an event or puja name');
-        setWatermark('#privateEventDate','mm/dd/yyyy');
-        setWatermark('#sponsorPhone','xxx-xxx-xxxx');
-        setWatermark('#sponsorEmail','abc@xyz.com');
-        setWatermark('#sponsorFirstName','First Name');
-        setWatermark('#sponsorLastName','Last Name');
 
         $( document ).tooltip({
             position: {

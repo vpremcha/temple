@@ -157,18 +157,19 @@
 
                 <div id="privateEventNameDiv" style="margin-top:5px;">
                     <label id="privateEventNameLabel" for="privateEventName"><span class="Normal-C">Event Name:</span></label>
-                    <input type="text" id="privateEventName" name="privateEventName" size="30" tabindex="1"/>
+                    <input type="text" id="privateEventName" name="privateEventName" size="30" tabindex="1" title="Please note only religious events are allowed."/>
                 </div>
 
                 <div id="eventDateDiv" style="margin-top:5px;">
                         <label id="eventDateLabel" for="eventDate"><span class="Normal-C">Event Date:</span></label>
                     <select id="eventDate" name="eventDate" size="1" tabindex="1" class="required dateUS">
+                        <option value="">N/A</option>
                     </select>
                 </div>
 
                 <div id="privateEventDateDiv" style="margin-top:5px;">
                     <label id="privateEventDateLabel" for="privateEventDate"><span class="Normal-C">Event Date/Time:</span></label>
-                    <input type="text" id="privateEventDate" name="privateEventDate" size="10" tabindex="1"/>
+                    <input type="text" id="privateEventDate" name="privateEventDate" size="10" tabindex="1" readonly='true' title="You can select any date within next 3 months"/>
                     <input type="text" id="privateEventTime" name="privateEventTime" size="5" tabindex="1" title="You can leave the time empty if you are not sure about the timing. When temple representative contact you, you can work with them on that"/>
                     <select id="privateEventTimeAMPM">
                         <option value="am">am</option>
