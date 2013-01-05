@@ -74,7 +74,14 @@ function resetForm() {
 }
 
 function submitForm(event) {
+    //Remove all the watermark text to validate
+    $("#form").find('.watermark').each(function(){
+        if(!this.reset)
+             this.value = '';
+    });
+
     var valid = $("#form").valid();
+
     if (!valid){
         return false;
     }
@@ -117,7 +124,28 @@ function loadScript(){
             return submitForm(event);
         });
 
-        eventTimeWatermark('#privateEventTime','hh:mm');
+        setWatermark('#privateEventTime','hh:mm');
+        setWatermark('#privateEventName','Enter an event or puja name');
+        setWatermark('#privateEventDate','mm/dd/yyyy');
+        setWatermark('#sponsorPhone','xxx-xxx-xxxx');
+        setWatermark('#sponsorEmail','abc@xyz.com');
+        setWatermark('#sponsorFirstName','First Name');
+        setWatermark('#sponsorLastName','Last Name');
+
+        $( document ).tooltip({
+            position: {
+                my: "center bottom-20",
+                at: "center top",
+                using: function( position, feedback ) {
+                    $( this ).css( position );
+                    $( "<div>" )
+                        .addClass( "arrow" )
+                        .addClass( feedback.vertical )
+                        .addClass( feedback.horizontal )
+                        .appendTo( this );
+                }
+            }
+        });
 
     });
     $(function() {
@@ -158,7 +186,7 @@ function loadScript(){
  *
  * This sets the watermark text on a field
  */
-function eventTimeWatermark(field,waterMark){
+function setWatermark(field,waterMark){
     var watermark = waterMark;
 
 	//init, set watermark text and class
