@@ -37,8 +37,8 @@ function fetchEventDates(){
     }
 
     //Close if tooltips already open
-    var tooltips = $( "[title]" ).tooltip();
-    tooltips.tooltip( "close" );
+    /*var tooltips = $( "[title]" ).tooltip();
+    tooltips.tooltip( "close" );*/
 
     $.getJSON('eventdates.json', function(data) {
 
@@ -51,6 +51,8 @@ function fetchEventDates(){
 
         $.each(data, function(key, val) {
             if (key == value) {
+                var tooltips = $( "#eventName" ).tooltip();
+                    tooltips.tooltip( "close" );
                 $('#eventName').attr('title',val[2].desc);
                 $.each(val[1], function(key1, val1) {
 
@@ -127,7 +129,7 @@ function loadScript(){
         setWatermark('#privateEventTime','hh:mm');
         setWatermark('#privateEventName','Enter an event or puja name');
 
-        $( document ).tooltip({
+        $( "#eventName" ).tooltip({
             position: {
                 my: "center bottom-20",
                 at: "center top",
@@ -140,6 +142,28 @@ function loadScript(){
                         .appendTo( this );
                 }
             }
+        });
+
+        $( "#contactType" ).tooltip({
+                    position: {
+                        my: "center bottom-20",
+                        at: "center top",
+                        using: function( position, feedback ) {
+                            $( this ).css( position );
+                            $( "<div>" )
+                                .addClass( "arrow" )
+                                .addClass( feedback.vertical )
+                                .addClass( feedback.horizontal )
+                                .appendTo( this );
+                        }
+                    }
+                });
+
+        $("#eventName").tooltip({
+            bodyHandler: function() {
+                return $($(this).attr("title")).html();
+            },
+            showURL: false
         });
 
     });
