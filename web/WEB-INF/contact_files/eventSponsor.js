@@ -52,8 +52,9 @@ function fetchEventDates(){
         $.each(data, function(key, val) {
             if (key == value) {
                 var tooltips = $( "#eventName" ).tooltip();
-                    tooltips.tooltip( "close" );
+                tooltips.tooltip( "close" );
                 $('#eventName').attr('title',val[2].desc);
+                tooltips.tooltip( "open" );
                 $.each(val[1], function(key1, val1) {
 
                     for (var i = 0; i < val1.length; i++) {
@@ -131,14 +132,11 @@ function loadScript(){
 
         $( "#eventName" ).tooltip({
             position: {
-                my: "center bottom-20",
-                at: "center top",
+                at: "right",
                 using: function( position, feedback ) {
                     $( this ).css( position );
                     $( "<div>" )
-                        .addClass( "arrow" )
                         .addClass( feedback.vertical )
-                        .addClass( feedback.horizontal )
                         .appendTo( this );
                 }
             }
