@@ -145,7 +145,7 @@ function loadScript(){
         $( "#contactType" ).tooltip({
                     position: {
                         my: "center bottom-20",
-                        at: "center top",
+                        at: "center bottom",
                         using: function( position, feedback ) {
                             $( this ).css( position );
                             $( "<div>" )
