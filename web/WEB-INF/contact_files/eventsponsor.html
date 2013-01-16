@@ -137,6 +137,18 @@
             bottom: -20px;
             top: auto;
         }
+
+        /*button{
+            width:200px;
+            height:50px;
+            display:block;
+            margin:10px;
+        }
+
+        .submit_btn{
+            background: black url(http://cmshuts.com/picts/background-quotes.gif) repeat-x 0 0 !important;
+            border:1px solid black!important;
+        }*/
     </style>
 
 </head>
@@ -153,6 +165,9 @@
                     <label id="eventNameLabel" for="eventName"><span class="Normal-C">Event Name:</span></label>
                     <select id="eventName" name="eventName" size="1" tabindex="1" class="required">
                     </select>
+                    <span id="eventInfoImage">
+                        <img src="Button-Info.ico" alt="some_text"/>
+                    </span>
                 </div>
 
                 <div id="privateEventNameDiv" style="margin-top:5px;">
@@ -169,7 +184,7 @@
 
                 <div id="privateEventDateDiv" style="margin-top:5px;">
                     <label id="privateEventDateLabel" for="privateEventDate"><span class="Normal-C">Event Date/Time:</span></label>
-                    <input type="text" id="privateEventDate" name="privateEventDate" size="10" tabindex="1" readonly='true' title="You can select any date within next 3 months"/>
+                    <input type="text" id="privateEventDate" name="privateEventDate" size="10" tabindex="1" readonly='true'/>
                     <input type="text" id="privateEventTime" name="privateEventTime" size="5" tabindex="1" title="You can leave the time empty if you are not sure about the timing. When temple representative contact you, you can work with them on that"/>
                     <select id="privateEventTimeAMPM">
                         <option value="am">am</option>
@@ -195,12 +210,12 @@
                     </select>
                 </div>
 
-                <div id="sponsorPhoneDiv" style="margin-top:5px;">
+                <div id="sponsorPhoneDiv" style="margin-top:11px;">
                     <label id="sponsorPhoneLabel" for="sponsorPhone"><span class="Normal-C">Phone Number:</span></label>
                     <input type="text" id="sponsorPhone" name="sponsorPhone" size="12" tabindex="1" class="required phoneUS"/>
                 </div>
 
-                <div id="sponsorEmailDiv" style="margin-top:5px;">
+                <div id="sponsorEmailDiv" style="margin-top:11px;">
                     <label id="sponsorEmailLabel" for="sponsorEmail"><span class="Normal-C">E-mail Address:</span></label>
                     <input type="text" id="sponsorEmail" name="sponsorEmail" size="50" tabindex="1" class="required email"/>
                 </div>

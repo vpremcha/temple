@@ -51,10 +51,10 @@ function fetchEventDates(){
 
         $.each(data, function(key, val) {
             if (key == value) {
-                var tooltips = $( "#eventName" ).tooltip();
+                var tooltips = $( "#eventInfoImage" ).tooltip();
                 tooltips.tooltip( "close" );
-                $('#eventName').attr('title',val[2].desc);
-                tooltips.tooltip( "open" );
+                $('#eventInfoImage').attr('title',val[2].desc);
+                $('#eventInfoImage').show();
                 $.each(val[1], function(key1, val1) {
 
                     for (var i = 0; i < val1.length; i++) {
@@ -108,6 +108,7 @@ function loadScript(){
 
         $('#privateEventNameDiv').hide();
         $('#privateEventDateDiv').hide();
+        $('#eventInfoImage').hide();
 
         $('#contactType').change(function() {
             var selectedType = $('#contactType').val();
@@ -130,7 +131,13 @@ function loadScript(){
         setWatermark('#privateEventTime','hh:mm');
         setWatermark('#privateEventName','Enter an event or puja name');
 
-        $( "#eventName" ).tooltip({
+        /*$( "input[type=submit], a, button" )
+          .button()
+          .click(function( event ) {
+                submitForm();
+        });*/
+
+        $( "#eventInfoImage" ).tooltip({
             position: {
                 at: "right",
                 using: function( position, feedback ) {
@@ -144,8 +151,6 @@ function loadScript(){
 
         $( "#contactType" ).tooltip({
                     position: {
-                        my: "center bottom-20",
-                        at: "center bottom",
                         using: function( position, feedback ) {
                             $( this ).css( position );
                             $( "<div>" )
