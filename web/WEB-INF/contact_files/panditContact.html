@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>Subscribe</title>
+    <title>Pandit Contact</title>
     <meta name="Generator" content="Serif WebPlus X6">
     <meta name="viewport" content="width=484">
     <link rel="stylesheet" href="wpstyles.css" type="text/css">
@@ -13,10 +13,13 @@
     <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
     <script type="text/javascript" src="http://dev.jquery.com/view/trunk/plugins/validate/lib/jquery.delegate.js"></script>
     <script type="text/javascript" src="http://dev.jquery.com/view/trunk/plugins/validate/jquery.validate.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+    <!--<script type="text/javascript" src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>-->
     <script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
     <script type="text/javascript" src="panditContact.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
 
     <style type="text/css">
         * { font-family: Verdana; font-size: 96%; }
@@ -39,6 +42,16 @@
 
         input.watermark {
             color: #999;
+        }
+        /*label {
+                display: inline-block;
+                width: 5em;
+            }*/
+        fieldset div {
+            margin-bottom: 2em;
+        }
+        fieldset .help {
+            display: inline-block;
         }
 
         .Body-P {
@@ -68,6 +81,63 @@
             line-height: 1.13em;
 
         }
+
+        .ui-tooltip, .arrow:after {
+            background: #B86494;
+            border: 2px solid black;
+        }
+
+        .ui-tooltip {
+            width: 210px;
+            font-family: "Verdana", sans-serif;
+                                    color: white;
+                                    font-size: 11.0px;
+            box-shadow: 0 0 7px black;
+        }
+
+        /*.ui-tooltip {
+            padding: 10px 20px;
+            color: white;
+            border-radius: 20px;
+            font: bold 14px "Helvetica Neue", Sans-Serif;
+            text-transform: uppercase;
+            box-shadow: 0 0 7px black;
+        }*/
+        .arrow {
+            width: 70px;
+            height: 16px;
+            overflow: hidden;
+            position: absolute;
+            left: 50%;
+            margin-left: -35px;
+            bottom: -16px;
+        }
+        .arrow.top {
+            top: -16px;
+            bottom: auto;
+        }
+        .arrow.left {
+            left: 20%;
+        }
+        .arrow:after {
+            content: "";
+            position: absolute;
+            left: 20px;
+            top: -20px;
+            width: 25px;
+            height: 25px;
+            box-shadow: 6px 5px 9px -9px black;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            tranform: rotate(45deg);
+        }
+        .arrow.top:after {
+            bottom: -20px;
+            top: auto;
+        }
+
     </style>
 
 </head>
@@ -92,18 +162,18 @@
 
             <div id="contactTypeDiv" style="margin-top:5px;">
                 <label id="contactTypeLabel" for="contactType"><span class="Normal-C">Please contact me by:</span></label>
-                <select id="contactType" name="contactType">
+                <select id="contactType" name="contactType" title="Pandit will either call or email you based on your selection here. We suggest phone is the best way for quick response.">
                     <option value="phone">Phone</option>
                     <option value="email">Email</option>
                 </select>
             </div>
 
-            <div id="phoneDiv" style="margin-top:5px;">
+            <div id="phoneDiv" style="margin-top:11px;">
                 <label id="phoneLabel" for="phone"><span class="Normal-C">Phone Number:</span></label>
                 <input type="text" id="phone" name="Phone" size="12" tabindex="1" class="required phoneUS"/>
             </div>
 
-            <div id="emailDiv" style="margin-top:5px;">
+            <div id="emailDiv" style="margin-top:11px;">
                 <label id="emailLabel" for="email"><span class="Normal-C">E-mail Address:</span></label>
                 <input type="text" id="email" name="email" size="50" tabindex="1" class="required email"/>
             </div>

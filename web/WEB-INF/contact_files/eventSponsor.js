@@ -21,7 +21,10 @@ function fetchEventDates(){
     var value = $('#eventName').val();
     var eventDateOptions = $('#eventDate');
 
-    if (value == 'Private'){
+    if (value == ''){
+        $('#puja_process').hide();
+        $('#eventInfoImage').hide();
+    } else if (value == 'Private'){
         $('#privateEventDateDiv').show();
         $('#privateEventNameDiv').show();
         $('#eventNameDiv').hide();
@@ -29,6 +32,8 @@ function fetchEventDates(){
         $('#privateEventName').addClass('required');
         $('#privateEventDate').addClass('required');
         $('#eventName').removeClass('required');
+        $('#puja_process').hide();
+        $('#eventInfoImage').hide();
         return;
     } else {
         $('#eventName').addClass('required');
@@ -53,8 +58,10 @@ function fetchEventDates(){
             if (key == value) {
                 var tooltips = $( "#eventInfoImage" ).tooltip();
                 tooltips.tooltip( "close" );
-                $('#eventInfoImage').attr('title',val[2].desc);
+                $('#eventInfoImage').attr('title',val[3].desc);
                 $('#eventInfoImage').show();
+                $('#puja_process').prop('href',val[2].puja);
+                $('#puja_process').show();
                 $.each(val[1], function(key1, val1) {
 
                     for (var i = 0; i < val1.length; i++) {
@@ -109,6 +116,7 @@ function loadScript(){
         $('#privateEventNameDiv').hide();
         $('#privateEventDateDiv').hide();
         $('#eventInfoImage').hide();
+        $('#puja_process').hide();
 
         $('#contactType').change(function() {
             var selectedType = $('#contactType').val();
@@ -150,17 +158,43 @@ function loadScript(){
         });
 
         $( "#contactType" ).tooltip({
-                    position: {
-                        using: function( position, feedback ) {
-                            $( this ).css( position );
-                            $( "<div>" )
-                                .addClass( "arrow" )
-                                .addClass( feedback.vertical )
-                                .addClass( feedback.horizontal )
-                                .appendTo( this );
-                        }
-                    }
-                });
+            position: {
+                using: function( position, feedback ) {
+                    $( this ).css( position );
+                    $( "<div>" )
+                        .addClass( "arrow" )
+                        .addClass( feedback.vertical )
+                        .addClass( feedback.horizontal )
+                        .appendTo( this );
+                }
+            }
+        });
+
+        $( "#privateEventName" ).tooltip({
+            position: {
+                using: function( position, feedback ) {
+                    $( this ).css( position );
+                    $( "<div>" )
+                        .addClass( "arrow" )
+                        .addClass( feedback.vertical )
+                        .addClass( feedback.horizontal )
+                        .appendTo( this );
+                }
+            }
+        });
+
+        $( "#privateEventTime" ).tooltip({
+            position: {
+                using: function( position, feedback ) {
+                    $( this ).css( position );
+                    $( "<div>" )
+                        .addClass( "arrow" )
+                        .addClass( feedback.vertical )
+                        .addClass( feedback.horizontal )
+                        .appendTo( this );
+                }
+            }
+        });
 
         $("#eventName").tooltip({
             bodyHandler: function() {
