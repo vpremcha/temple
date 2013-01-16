@@ -57,6 +57,8 @@ function fetchEventDates(){
           var options = eventDateOptions.attr('options');
         }
         $('option', eventDateOptions).remove();
+        $('#puja_process').hide();
+        $('#eventInfoImage').hide();
 
         $.each(data, function(key, val) {
             if (key == value) {
