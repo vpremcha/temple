@@ -7,7 +7,7 @@
                   { "desc" : "<table><tr><td rowspan='2'><img id='sai_bhajan' src='http://stocktonhindutemple.org/img/content/ShiridiSai.jpg' style='height:84px;width:70px;border-width:0px;'></td><td><span style='color:black; font-size:15px'>Sai Bhajans and Pravachan.</span></td></tr><tr><td>Sing aloud the glory of God and charge the atmosphere with divine adoration . . .</td></tr></table></br><b>Time</b>: 7:30 PM till 8:30 PM</br><b>When</b>:Every Thursday"}],
   "sundar_kand": [ { "name" : "Sundar Kand" } ,
                   {"dates" : ["12/19/2013"]} ,
-                  { "puja" : "pujaProcess.html#sundar_kand" },
+                  { "puja" : "" },
                   { "desc" : "<table><tr><td rowspan='2'><img id='sundar_kand' src='http://stocktonhindutemple.org/img/content/Hanuman.jpg' style='height:84px;width:70px;border-width:0px;'></td><td><span style='color:black; font-size:15px'>Sundar Kand</span></td></tr><tr><td>Sundara Kanda, literally 'beautiful episode/book', is the fifth book in the Hindu epic the Ramayana.</td></tr></table><b>Time</b>: 03:00 PM till 05:00 PM</br><b>Do you know?: </b>Sundara Kanda is the only chapter of the Ramayana in which the hero is not Rama, but rather Hanuman.</br>"}],
   "Satya_narayana_puja" : [ { "name" : "Sri Satyannarayana Puja" } ,
                   {"dates" : ["01/26/2013"]} ,
