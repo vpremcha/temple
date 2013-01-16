@@ -45,6 +45,10 @@ function fetchEventDates(){
     /*var tooltips = $( "[title]" ).tooltip();
     tooltips.tooltip( "close" );*/
 
+    function isEmpty(str) {
+        return (!str || 0 === str.length);
+    }
+
     $.getJSON('eventdates.json', function(data) {
 
         if(eventDateOptions.prop) {
@@ -58,10 +62,14 @@ function fetchEventDates(){
             if (key == value) {
                 var tooltips = $( "#eventInfoImage" ).tooltip();
                 tooltips.tooltip( "close" );
-                $('#eventInfoImage').attr('title',val[3].desc);
-                $('#eventInfoImage').show();
-                $('#puja_process').prop('href',val[2].puja);
-                $('#puja_process').show();
+                if (!isEmpty(val[3].desc)){
+                    $('#eventInfoImage').attr('title',val[3].desc);
+                    $('#eventInfoImage').show();
+                }
+                if (!isEmpty(val[2].puja)){
+                    $('#puja_process').prop('href',val[2].puja);
+                    $('#puja_process').show();
+                }
                 $.each(val[1], function(key1, val1) {
 
                     for (var i = 0; i < val1.length; i++) {
