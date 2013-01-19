@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Contact forms</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css" />
+  <script>
+  $(function() {
+    $( "#tabs" ).tabs();
+      /*$( "#tabs" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+          $( "#tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );*/
+  });
+  </script>
+  <style>
+      .ui-tabs-nav li { font-size: 9pt; text-decoration-color: #000000}
+      .ui-tabs { list-style: none; position: relative; padding: .2em .2em 0; background: #723450; width: 730px;}
+      .ui-tabs .ui-tabs-nav li.ui-tabs-selected { padding-bottom:1px; border-bottom-width: 0; }
+      /*.ui-tabs-vertical { width: 55em; }
+        .ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: left; width: 12em; }
+        .ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
+        .ui-tabs-vertical .ui-tabs-nav li a { display:block; }
+        .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; border-right-width: 1px; }
+        .ui-tabs-vertical .ui-tabs-panel { padding: 1em; float: right; width: 40em;}*/
+  </style>
+</head>
+<body style="background:#723450 repeat scroll top center;">
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">General Comments/Suggestions</a></li>
+    <li><a href="#tabs-2">Contact our Pandit Ji</a></li>
+    <li><a href="#tabs-3">Sponsor an event</a></li>
+    <li><a href="#tabs-4">Contact committee members</a></li>
+  </ul>
+  <div id="tabs-1">
+      <iframe frameborder="0" style="height: 600px;
+                       overflow-y: auto;
+                       overflow-x: hidden;width:602px;" src="contact_files/generalContact.html"></iframe></p>
+  </div>
+  <div id="tabs-2">
+      <iframe frameborder="0" style="height: 600px;
+                             overflow-y: auto;
+                             overflow-x: hidden;width:602px;" src="contact_files/panditContact.html"></iframe></p>
+  </div>
+  <div id="tabs-3">
+      <iframe frameborder="0" style="height: 600px;
+                             overflow-y: auto;
+                             overflow-x: hidden;width:602px;" src="contact_files/eventsponsor.html"></iframe></p>
+  </div>
+  <div id="tabs-4">
+      <iframe frameborder="0" style="height: 600px;
+                             overflow-y: auto;
+                             overflow-x: hidden;width:602px;" src="contact_files/committeeContact.html"></iframe></p>
+  </div>
+</div>
+
+
+</body>
+</html>
