@@ -32,9 +32,10 @@
     </script>
 
     <style type="text/css">
-        body {
-            margin: 0;
-            padding: 0;
+        body
+        {
+            margin-top:30px;
+            margin-left: 30px;
         }
 
         input.watermark {
@@ -73,31 +74,30 @@
 </head>
 
 <body text="#000000" style="background:#723450 url(&#39;wpimages/wpb4ba4d6c_06.png&#39;) repeat scroll top center; height:574px;">
-    <form id="form" method="post"  action="http://www.startlogic.com/scripts/formemail.bml">
-        <input type="hidden" name="my_email" value="administrator@stocktonhindutemple.org">
-        <input type="hidden" name="subject" value="Committee contact">
-        <input type="hidden" name="thankyou_url" value="http://stocktonhindutemple.org/submitthankyou.html">
-        <input type="hidden" name="error_url" value="http://stocktonhindutemple.org/submiterror.html">
+    <form id="form" method="post"  action="http://www.stocktonhindutemple.org/Resource/SendMail.php">
+        <input type="hidden" name="ACTION" value="COMMITTEE_CONTACT">
         <div id="contactDiv" style="background-color:transparent;position:relative;width:484px;height:574px;left: 8px;">
 
             <div id="committeeToContactDiv" style="margin-top:5px;">
                 <label id="committeeToContactLabel" for="committeeToContact"><span class="Normal-C">Committee:</span></label>
-                <select id="committeeToContact" name="committeeToContact" class="required">
-                    <option value="Religious">Religious</option>
-                    <option value="Maintenance">Maintenance</option>
-                    <option value="IT">Information Technology</option>
+                <select id="committeeToContact" name="CommitteeName" class="required">
                 </select>
             </div>
 
-            <div id="firstNameDiv" style="margin-top:5px;">
-                <label id="firstNameLabel" for="firstName"><span class="Normal-C">First Name:</span></label>
-                <input type="text" id="firstName" name="FirstName" size="50" tabindex="1" class="required"/>
+            <div id="subjectDiv" style="margin-top:5px;">
+                <label id="subjectLabel" for="subject"><span class="Normal-C">Subject:</span></label>
+                <input type="text" id="subject" name="Subject" size="50" tabindex="1" class="required"/>
             </div>
 
-            <div id="lastNameDiv" style="margin-top:5px;">
+            <div id="fullNameDiv" style="margin-top:5px;">
+                <label id="fullNameLabel" for="fullName"><span class="Normal-C">Full Name:</span></label>
+                <input type="text" id="fullName" name="FullName" size="50" tabindex="1" class="required"/>
+            </div>
+
+            <!--<div id="lastNameDiv" style="margin-top:5px;">
                 <label id="lastNameLabel" for="lastName"><span class="Normal-C">Last Name:</span></label>
                 <input type="text" id="lastName" name="LastName" size="50" tabindex="1" class="required"/>
-            </div>
+            </div>-->
 
             <div id="contactTypeDiv" style="margin-top:5px;">
                 <label id="contactTypeLabel" for="contactType"><span class="Normal-C">Please contact me by:</span></label>
@@ -114,12 +114,12 @@
 
             <div id="emailDiv" style="margin-top:11px;">
                 <label id="emailLabel" for="email"><span class="Normal-C">E-mail Address:</span></label>
-                <input type="text" id="email" name="email" size="40" tabindex="1" class="required email"/>
+                <input type="text" id="email" name="Email" size="40" tabindex="1" class="required email"/>
             </div>
 
             <div id="questionDiv" style="margin-top:15px;">
                 <label id="questionLabel" for="question"><span class="Normal-C-C0">Question:</span></label>
-                <textarea type="text" id="question" name="question" rows="11" cols="52" tabindex="1" class="required"></textarea>
+                <textarea type="text" id="question" name="Comments" rows="11" cols="52" tabindex="1" class="required"></textarea>
             </div>
 
             <input type="submit" style="margin-top:20px; position:absolute; left:108px; width:81px; height:22px;" id="submit" value="Submit">

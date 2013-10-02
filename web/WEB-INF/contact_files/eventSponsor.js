@@ -91,6 +91,7 @@ function fetchEventDates(){
 
 function resetForm() {
     location.reload();
+    loadScript();
 }
 
 function submitForm(event) {
