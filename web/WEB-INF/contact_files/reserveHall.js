@@ -1,27 +1,6 @@
-function loadStates(){
-    /*$.getJSON('states.json', function(data) {
-
-        var committeeOptions = $('#state');
-
-        if(committeeOptions.prop) {
-          var options = committeeOptions.prop('options');
-        } else {
-          var options = committeeOptions.attr('options');
-        }
-        $('option', committeeOptions).remove();
-
-        $.each(data, function(key, val) {
-            options[options.length] = new Option(key, val);
-        });
-
-        committeeOptions.val("CA");
-    });*/
-}
 
 function resetForm() {
     location.reload();
-    var committeeOptions = $('#state');
-    committeeOptions.val("CA");
     loadScript();
 }
 
@@ -50,8 +29,6 @@ function submitForm(event) {
 function loadScript(){
 
     $(document).ready(function(){
-
-        loadStates();
 
         $(function() {
             $( "#eventDate" ).datepicker({ minDate: 1, maxDate: "+12M" });

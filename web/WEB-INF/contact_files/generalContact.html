@@ -32,29 +32,17 @@
     </script>
 
     <style type="text/css">
-        body {
-            margin: 0;
-            padding: 0;
+        body
+        {
+            margin-top:30px;
+            margin-left: 30px;
         }
 
         input.watermark {
             color: #999;
         }
 
-        .Body-P {
-            margin: 0.0px 0.0px 0.0px 0.0px;
-            text-align: left;
-            font-weight: 400;
-        }
-
         .Normal-C {
-            font-family: "Verdana", sans-serif;
-            color: #ffffff;
-            font-size: 13.0px;
-            line-height: 1.23em;
-        }
-
-        .Body-C {
             font-family: "Verdana", sans-serif;
             color: #ffffff;
             font-size: 13.0px;
@@ -77,14 +65,9 @@
         <input type="hidden" name="ACTION" value="GENERAL_CONTACT">
         <div id="contactDiv" style="background-color:transparent;position:relative;width:484px;height:574px;left: 8px;">
 
-            <div id="firstNameDiv" style="margin-top:5px;">
-                <label id="firstNameLabel" for="firstName"><span class="Normal-C">First Name:</span></label>
-                <input type="text" id="firstName" name="FirstName" size="50" tabindex="1" class="required"/>
-            </div>
-
-            <div id="lastNameDiv" style="margin-top:5px;">
-                <label id="lastNameLabel" for="lastName"><span class="Normal-C">Last Name:</span></label>
-                <input type="text" id="lastName" name="LastName" size="50" tabindex="1" class="required"/>
+            <div id="fullNameDiv" style="margin-top:5px;">
+                <label id="fullNameLabel" for="fullName"><span class="Normal-C">Full Name:</span></label>
+                <input type="text" id="fullName" name="FullName" size="50" tabindex="1" class="required"/>
             </div>
 
             <div id="phoneDiv" style="margin-top:5px;">
