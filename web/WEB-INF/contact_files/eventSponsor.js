@@ -10,8 +10,10 @@ function fetchEventNames(){
         }
         $('option', eventNameOptions).remove();
 
+        eventNameOptions.append(new Option("",""));
+        eventNameOptions.append(new Option("Private Event","Private"));
         $.each(data, function(key, val) {
-            options[options.length] = new Option(val[0].name, key);
+            eventNameOptions.append(new Option(val.Description, val.ProgType));
         });
 
     });
@@ -23,7 +25,7 @@ function fetchEventDates(){
 
     if (value == ''){
         $('#puja_process').hide();
-        $('#eventInfoImage').hide();
+//        $('#eventInfoImage').hide();
     } else if (value == 'Private'){
         $('#privateEventDateDiv').show();
         $('#privateEventNameDiv').show();
@@ -33,7 +35,7 @@ function fetchEventDates(){
         $('#privateEventDate').addClass('required');
         $('#eventName').removeClass('required');
         $('#puja_process').hide();
-        $('#eventInfoImage').hide();
+//        $('#eventInfoImage').hide();
         return;
     } else {
         $('#eventName').addClass('required');
@@ -57,20 +59,35 @@ function fetchEventDates(){
           var options = eventDateOptions.attr('options');
         }
         $('option', eventDateOptions).remove();
-        $('#puja_process').hide();
-        $('#eventInfoImage').hide();
+//        $('#puja_process').hide();
+//        $('#eventInfoImage').hide();
 
         $.each(data, function(key, val) {
+            if (value == val.ProgType){
+                for (var i = 0; i < val.EventDate.length; i++) {
+                    var today = new Date();
+//                    var fromFile = new Date(val.EventDate[i]);
+                    var date1 = val.EventDate[i].trim().replace(/-/g,"/");
+                    var fromFile = new Date(date1);
+                    //Make sure the date is greater than today
+                    if ((fromFile - today) > 0){
+                        options[options.length] = new Option(val.EventDate[i], val.EventDate[i]);
+                    }
+                }
+            }
+        });
+
+        /*$.each(data, function(key, val) {
             if (key == value) {
-                var tooltips = $( "#eventInfoImage" ).tooltip();
-                tooltips.tooltip( "close" );
+//                var tooltips = $( "#eventInfoImage" ).tooltip();
+//                tooltips.tooltip( "close" );
                 if (!isEmpty(val[3].desc)){
-                    $('#eventInfoImage').attr('title',val[3].desc);
+//                    $('#eventInfoImage').attr('title',val[3].desc);
                     $('#eventInfoImage').show();
                 }
                 if (!isEmpty(val[2].puja)){
-                    $('#puja_process').prop('href',val[2].puja);
-                    $('#puja_process').show();
+//                    $('#puja_process').prop('href',val[2].puja);
+//                    $('#puja_process').show();
                 }
                 $.each(val[1], function(key1, val1) {
 
@@ -84,6 +101,24 @@ function fetchEventDates(){
                     }
                 });
             }
+        });*/
+
+        var eventCode = $('#eventName').val();
+
+        $.each(data, function(key, val) {
+            $.each(val, function(key1, val1){
+                if (eventCode == val1.ProgType){
+                    for (var i = 0; i < val1.EventDate.length; i++) {
+                        var today = new Date();
+                        var datea = val1.EventDate[i].substring(0,10);
+                        var fromFile = new Date(datea);
+                        //Make sure the date is greater than today
+                        if ((fromFile - today) > 0){
+                            options[options.length] = new Option(val1.EventDate[i], val1.EventDate[i]);
+                        }
+                    }
+                }
+            });
         });
 
     });
@@ -127,7 +162,7 @@ function loadScript(){
         $('#privateEventNameDiv').hide();
         $('#privateEventDateDiv').hide();
         $('#eventInfoImage').hide();
-        $('#puja_process').hide();
+//        $('#puja_process').hide();
 
         $('#contactType').change(function() {
             var selectedType = $('#contactType').val();

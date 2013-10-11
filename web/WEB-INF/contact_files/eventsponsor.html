@@ -95,14 +95,6 @@
             box-shadow: 0 0 7px black;
         }
 
-        /*.ui-tooltip {
-            padding: 10px 20px;
-            color: white;
-            border-radius: 20px;
-            font: bold 14px "Helvetica Neue", Sans-Serif;
-            text-transform: uppercase;
-            box-shadow: 0 0 7px black;
-        }*/
         .arrow {
             width: 70px;
             height: 16px;
@@ -138,18 +130,6 @@
             top: auto;
         }
 
-        /*button{
-            width:200px;
-            height:50px;
-            display:block;
-            margin:10px;
-        }
-
-        .submit_btn{
-            background: black url(http://cmshuts.com/picts/background-quotes.gif) repeat-x 0 0 !important;
-            border:1px solid black!important;
-        }*/
-
     </style>
 
 </head>
@@ -163,11 +143,11 @@
                     <label id="eventNameLabel" for="eventName"><span class="Normal-C">Event Name:</span></label>
                     <select id="eventName" name="eventName" size="1" tabindex="1" class="required">
                     </select>
-                    <span id="eventInfoImage">
+                    <!--<span id="eventInfoImage">
                         <img src="Button-Info.ico" alt="some_text" height="14" width="14"/>
                     </span>
                     </br>
-                    <a id="puja_process" style="color:#ef86ff;margin-left: 130px" href="" target="_blank">Click here for puja details</a>
+                    <a id="puja_process" style="color:#ef86ff;margin-left: 130px" href="" target="_blank">Click here for puja details</a>-->
                 </div>
 
                 <div id="privateEventNameDiv" style="margin-top:5px;">
@@ -185,8 +165,8 @@
                 <div id="privateEventDateDiv" style="margin-top:5px;">
                     <label id="privateEventDateLabel" for="privateEventDate"><span class="Normal-C">Event Date/Time:</span></label>
                     <input type="text" id="privateEventDate" name="privateEventDate" size="10" tabindex="1" readonly='true'/>
-                    <input type="text" id="privateEventTime" name="privateEventTime" size="5" tabindex="1" title="You can leave this empty if you are not sure about the timing. When temple representative contact you, you can check with them."/>
-                    <select id="privateEventTimeAMPM">
+                    <input type="text" id="privateEventTime" name="privateEventTime" size="5" tabindex="1" autocomplete="off" title="You can leave this empty if you are not sure about the timing. When temple representative contact you, you can check with them."/>
+                    <select id="privateEventTimeAMPM" name="privateEventTimeAMPM">
                         <option value="am">am</option>
                         <option value="pm">pm</option>
                     </select>
@@ -221,7 +201,7 @@
                 </div>
 
                 <input type="submit" style="margin-top:20px; position:absolute; left:108px; width:81px; height:22px;" id="submit" value="Submit">
-                <input type="reset" style="margin-top:20px; position:absolute; left:275px; width:76px; height:22px;" id="reset" value="Reset" onclick="resetForm();">
+                <input type="reset" style="margin-top:20px; position:absolute; left:275px; width:76px; height:22px;" id="reset" value="Clear" onclick="resetForm();">
 
         </div>
     </form>

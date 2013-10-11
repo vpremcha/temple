@@ -1,21 +1,97 @@
-{
-  "" : [ { "name" : "Select an event" } ],
-  "Private" : [ { "name" : "Private" } ],
-  "Sai-Bhajan": [ { "name" : "Sai Baba Bhajan" } ,
-                  {"dates" : ["12/09/2013" , "11/08/2013" , "12/12/2013"]} ,
-                  { "puja" : "pujaProcess-newDesign.html?select=0" },
-                  { "desc" : "<table><tr><td rowspan='2'><img id='sai_bhajan' src='http://stocktonhindutemple.org/img/content/ShiridiSai.jpg' style='height:84px;width:70px;border-width:0px;'></td><td><span style='color:black; font-size:15px'>Sai Bhajans and Pravachan.</span></td></tr><tr><td>Sing aloud the glory of God and charge the atmosphere with divine adoration . . .</td></tr></table></br><b>Time</b>: 7:30 PM till 8:30 PM</br><b>When</b>:Every Thursday"}],
-  "sundar_kand": [ { "name" : "Sundar Kand" } ,
-                  {"dates" : ["12/19/2013"]} ,
-                  { "puja" : "pujaProcess-newDesign.html?select=2" },
-                  { "desc" : "<table><tr><td rowspan='2'><img id='sundar_kand' src='http://stocktonhindutemple.org/img/content/Hanuman.jpg' style='height:84px;width:70px;border-width:0px;'></td><td><span style='color:black; font-size:15px'>Sundar Kand</span></td></tr><tr><td>Sundara Kanda, literally 'beautiful episode/book', is the fifth book in the Hindu epic the Ramayana.</td></tr></table><b>Time</b>: 03:00 PM till 05:00 PM</br><b>Suggested Donation</b>: 25</br><b>Do you know?: </b>Sundara Kanda is the only chapter of the Ramayana in which the hero is not Rama, but rather Hanuman.</br>"}],
-  "Satya_narayana_puja" : [ { "name" : "Sri Satyannarayana Puja" } ,
-                  {"dates" : ["11/26/2013"]} ,
-                  { "puja" : "pujaProcess-newDesign.html?select=1" },
-                  { "desc" : "<table><tr><td valign='top'><img id='Satyna_narayana_puja' src='http://stocktonhindutemple.org/img/content/SatyannarayanaSwami.jpg' style='height:84px;width:70px;border-width:0px;'></td><td><span valign='top' style='color:black; font-size:15px'>Sri Satyannarayana Puja</span></td></tr></table>The Satyanarayan Puja is performed in reverence to the Narayan form of Lord Vishnu. The Lord in this form is considered an embodiment of truth.</br></br><b style='text-decoration:underline;'>Time</b>: 06:30 PM till 08:00 PM</br><b style='text-decoration:underline;'>Interesting Fact</b>: This puja is performed daily at a very ancient famous temple for Sri Satyanarayana Swamy at Annavaram, East Godavari dt, Andhra Pradesh"}],
-  "new_year": [ { "name" : "New year's program" } ,
-                   {"dates" : ["11/01/2014 12:00"]} ,
-                   { "puja" : "" },
-                   { "desc" : ""}]
-
-}
+[
+   {
+      "ProgType":"BALVIKAS",
+      "Description":"BalVikas",
+      "EventDate":[
+         "10-13-2013",
+         "10-27-2013",
+         "11-10-2013",
+         "11-24-2013",
+         "12-08-2013",
+         "12-22-2013"
+      ]
+   },
+   {
+      "ProgType":"GITA",
+      "Description":"Gita Class",
+      "EventDate":[
+         "10-11-2013",
+         "10-18-2013",
+         "10-25-2013",
+         "11-01-2013",
+         "11-08-2013",
+         "11-15-2013",
+         "11-22-2013",
+         "11-29-2013",
+         "12-06-2013",
+         "12-13-2013",
+         "12-20-2013",
+         "12-27-2013"
+      ]
+   },
+   {
+      "ProgType":"RAMKATHA",
+      "Description":"Sri Ramayan Katha",
+      "EventDate":[
+         "10-15-2013",
+         "10-22-2013",
+         "10-29-2013",
+         "11-05-2013",
+         "11-12-2013",
+         "11-19-2013",
+         "11-26-2013",
+         "12-03-2013",
+         "12-10-2013",
+         "12-17-2013",
+         "12-24-2013",
+         "12-31-2013"
+      ]
+   },
+   {
+      "ProgType":"SAIPRAV",
+      "Description":"Sai Bhajans, Pravachan and Dinner ",
+      "EventDate":[
+         "10-10-2013",
+         "10-24-2013",
+         "11-14-2013",
+         "11-28-2013",
+         "12-12-2013",
+         "12-26-2013"
+      ]
+   },
+   {
+      "ProgType":"SHIVPUJA",
+      "Description":"Shiv Puja",
+      "EventDate":[
+         "10-14-2013",
+         "10-21-2013",
+         "10-28-2013",
+         "11-04-2013",
+         "11-11-2013",
+         "11-18-2013",
+         "11-25-2013",
+         "12-02-2013",
+         "12-09-2013",
+         "12-16-2013",
+         "12-23-2013",
+         "12-30-2013"
+      ]
+   },
+   {
+      "ProgType":"SUNDARK",
+      "Description":"Sundar kand",
+      "EventDate":[
+         "10-19-2013",
+         "11-16-2013",
+         "12-21-2013"
+      ]
+   },
+   {
+      "ProgType":"VNKTESUPRA",
+      "Description":"Sri Venkateswara Suprabhatam",
+      "EventDate":[
+         "11-02-2013",
+         "12-07-2013"
+      ]
+   }
+]
